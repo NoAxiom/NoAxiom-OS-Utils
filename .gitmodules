@@ -1,0 +1,4 @@
+[submodule "la-2k1000-sim"]
+	path = la-2k1000-sim
+	url = https://github.com/YuXuaann/la-2k1000-sim
+
