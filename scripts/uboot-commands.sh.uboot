@@ -1,0 +1,12 @@
+# This script contains U-Boot commands for NoAxiom OS.
+# Do not run this script directly; it can only be executed in U-Boot.
+
+tftp 0x9000000090000000 uImage
+boot
+
+fdt addr 0x900000000eccf480
+fdt print
+
+# Do not delete this!!!
+prev bootcmd =
+"tftp 0x9000000090000000 uImage; setenv bootargs ${bootargs} root=/dev/sda${syspart} mtdparts=${mtdparts} fbcon=rotate:${rotate} panel=${panel}; sf probe;sf read ${fdt_addr} dtb;scsi reset;ext4load scsi 0:${syspart} ${loadaddr} /boot/uImage;bootm"
