@@ -1,7 +1,8 @@
-kernel_bin=../../kernel-la-uimage
+kernel_bin=../../kernel-la
+kernel_ui=../../kernel-la-uimage
 sim_path=../la-2k1000-sim
 tftp_path=/mnt/d/tftp
-boot_command_path=scripts/uboot-commands.sh
+boot_command_path=scripts/2k1000-commands.sh.uboot
 
 echo "Building uImage for LA architecture..."
 cd ${sim_path} && make uimage
