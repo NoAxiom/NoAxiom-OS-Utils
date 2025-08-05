@@ -10,3 +10,8 @@ fdt print
 # Do not delete this!!!
 prev bootcmd =
 "tftp 0x9000000090000000 uImage; setenv bootargs ${bootargs} root=/dev/sda${syspart} mtdparts=${mtdparts} fbcon=rotate:${rotate} panel=${panel}; sf probe;sf read ${fdt_addr} dtb;scsi reset;ext4load scsi 0:${syspart} ${loadaddr} /boot/uImage;bootm"
+
+tftp 0x9000000090000000 2k1000
+go 0x9000000090000000
+
+setenv bootcmd 'tftp 0x9000000090000000 2k1000;go 0x9000000090000000'

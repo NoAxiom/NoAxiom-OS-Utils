@@ -1,5 +1,4 @@
 kernel_bin=../../kernel-rv.bin
-sim_path=../la-2k1000-sim
 tftp_path=/mnt/d/tftp
 boot_command_path=visionfive-commands.sh.uboot
 
